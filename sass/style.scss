@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 @import 'reset';
 body::before {
     display: block;
@@ -6,3 +8,4 @@ body::before {
 }
 @import 'header';
 @import 'about';
+@import 'features';

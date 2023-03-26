@@ -1,5 +1,5 @@
 $font-size: 18px;
-$font-stack: Arial, Helvetica, sans-serif;
+$font-stack: Rubik, Arial, Times;
 $font-weight: 400;
 $color: #000;
 
@@ -14,6 +14,7 @@ $color: #000;
 *:after {
     @include standart();
     scroll-behavior: smooth;
+    font-family: $font-stack;
 }
 
 body {
@@ -24,10 +25,6 @@ body {
 
     ul {
         list-style-type: none;
-    }
-
-    img {
-        width: 100%;
     }
 
     button {
