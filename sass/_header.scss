@@ -1,7 +1,7 @@
 $primary: #0B132A;
 $grey: #4F5665;
 $danger: #F53855;
-$light: #d8d8d8;
+$light: #fdfdfd;
 
 @mixin flex {
     display: flex;
@@ -19,6 +19,7 @@ $light: #d8d8d8;
 
 
 .navbar {
+    background-color: $light;
     flex-direction: row;
     position: sticky;
     top: 10px;
