@@ -45,7 +45,7 @@ $shadow-grey: #d8d8d894;
 
 
             .col {
-                width: 33%;
+                flex-basis: 33%;
                 padding: 0 5%;
                 @include flex($justify: center);
                 flex-wrap: nowrap;
@@ -87,6 +87,27 @@ $shadow-grey: #d8d8d894;
 
             &:active {
                 transform: scale(0.8);
+            }
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .container {
+        .element {
+            flex-basis: 100%;
+
+            &-row {
+                flex-wrap: wrap;
+
+                .col {
+                    flex-basis: 100%;
+                    justify-content: flex-start;
+
+                    &-center {
+                        border: 0;
+                    }
+                }
             }
         }
     }

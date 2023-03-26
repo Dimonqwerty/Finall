@@ -27,6 +27,7 @@ $light: #fdfdfd;
     margin-top: 2%;
     padding: 1% 5%;
     @include flex();
+    flex-wrap: wrap;
 
     .navbar-brand {
         @include flex();
@@ -49,6 +50,24 @@ $light: #fdfdfd;
 
     .menu-toggle {
         display: none;
+    }
+
+    .sidebar {
+        text-align: center;
+        display: none;
+        width: 90%;
+        padding: 1% 5%;
+        background-color: $light;
+        margin: 0 5%;
+        border-radius: 20px;
+
+        .list-item {
+            margin: 2% 0;
+        }
+
+        .sing {
+            margin: 5% 0;
+        }
     }
 }
 
@@ -74,7 +93,7 @@ $light: #fdfdfd;
             color: $danger;
             border: 2px solid $danger;
 
-            &:hover{
+            &:hover {
                 background: $danger;
                 color: $light;
             }
@@ -86,30 +105,12 @@ $light: #fdfdfd;
     @include list-item();
 }
 
-.sidebar {
-    text-align: center;
-    display: none;
-    width: 90%;
-    padding: 1% 5%;
-    background-color: $light;
-    margin: 0 5%;
-    border-radius: 20px;
-
-    .list-item {
-        margin: 2% 0;
-    }
-
-    .sing {
-        margin: 5% 0;
-    }
-}
-
-@media (max-width:450px) {
+@media (max-width:500px) {
     .navbar {
         flex-direction: row;
         justify-content: space-around;
 
-        .sing,
+        .sing-main,
         .list-group {
             display: none;
         }

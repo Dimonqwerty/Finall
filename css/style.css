@@ -49,6 +49,7 @@ body::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .navbar .navbar-brand {
   display: flex;
@@ -74,6 +75,21 @@ body::before {
 }
 .navbar .menu-toggle {
   display: none;
+}
+.navbar .sidebar {
+  text-align: center;
+  display: none;
+  width: 90%;
+  padding: 1% 5%;
+  background-color: #fdfdfd;
+  margin: 0 5%;
+  border-radius: 20px;
+}
+.navbar .sidebar .list-item {
+  margin: 2% 0;
+}
+.navbar .sidebar .sing {
+  margin: 5% 0;
 }
 
 .sing {
@@ -109,28 +125,12 @@ body::before {
   color: #4F5665;
 }
 
-.sidebar {
-  text-align: center;
-  display: none;
-  width: 90%;
-  padding: 1% 5%;
-  background-color: #fdfdfd;
-  margin: 0 5%;
-  border-radius: 20px;
-}
-.sidebar .list-item {
-  margin: 2% 0;
-}
-.sidebar .sing {
-  margin: 5% 0;
-}
-
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .navbar {
     flex-direction: row;
     justify-content: space-around;
   }
-  .navbar .sing,
+  .navbar .sing-main,
   .navbar .list-group {
     display: none;
   }
@@ -173,7 +173,7 @@ body::before {
   box-shadow: 0 25px 20px rgba(216, 216, 216, 0.5803921569);
 }
 .container .element-row .col {
-  width: 33%;
+  flex-basis: 33%;
   padding: 0 5%;
   display: flex;
   justify-content: center;
@@ -211,4 +211,20 @@ body::before {
 }
 .container .element button:active {
   transform: scale(0.8);
+}
+
+@media (max-width: 500px) {
+  .container .element {
+    flex-basis: 100%;
+  }
+  .container .element-row {
+    flex-wrap: wrap;
+  }
+  .container .element-row .col {
+    flex-basis: 100%;
+    justify-content: flex-start;
+  }
+  .container .element-row .col-center {
+    border: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
