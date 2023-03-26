@@ -1,3 +1,12 @@
+$dark: #0B132A;
+$danger: #F53838;
+$grey: #4F5665;
+$light: #FFFFFF;
+$shadow: #F5383859;
+$light-gray: #EEEFF2;
+$shadow-grey: #d8d8d894;
+
+
 @mixin flex ($justify: space-between) {
     display: flex;
     justify-content: $justify;
@@ -17,11 +26,68 @@
         h1 {
             font-size: 45px;
             font-weight: 700;
+            color: $dark;
+            margin-bottom: 3%;
+        }
+
+        p {
+            color: $grey;
         }
 
         &-row {
+            border-radius: 10px;
             flex-basis: 100%;
-            @include flex($justify: center);
+            @include flex($justify: space-between);
+            margin: 8% 0;
+            padding: 2% 0;
+            text-align: center;
+            box-shadow: 0 25px 20px $shadow-grey;
+
+
+            .col {
+                width: 33%;
+                padding: 0 5%;
+                @include flex($justify: center);
+                flex-wrap: nowrap;
+
+                span {
+                    text-align: left;
+
+                    h3 {
+                        color: $dark;
+                    }
+
+                    p {
+                        color: $grey;
+                    }
+                }
+
+                img {
+                    width: 20%;
+                    margin-right: 10%;
+                }
+
+                &-center {
+                    border-left: 2px solid $light-gray;
+                    border-right: 2px solid $light-gray;
+                }
+            }
+        }
+
+        button {
+            background: $danger;
+            padding: 2% 5%;
+            margin: 4% 0;
+            color: $light;
+            font-size: 16px;
+            line-height: 25px;
+            border-radius: 10px;
+            transition: transform 0.25s;
+            box-shadow: 0 10px 18px $shadow;
+
+            &:active {
+                transform: scale(0.8);
+            }
         }
     }
 }

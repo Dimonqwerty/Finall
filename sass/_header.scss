@@ -1,6 +1,6 @@
 $primary: #0B132A;
 $grey: #4F5665;
-$danger: #F53855;
+$danger: #F53838;
 $light: #fdfdfd;
 
 @mixin flex {
@@ -22,7 +22,7 @@ $light: #fdfdfd;
     background-color: $light;
     flex-direction: row;
     position: sticky;
-    top: 10px;
+    top: 0;
     width: 100%;
     margin-top: 2%;
     padding: 1% 5%;
@@ -64,15 +64,20 @@ $light: #fdfdfd;
         border-radius: 30px;
         color: $primary;
         border: 0;
-        cursor: pointer;
+        transition: transform 0.25s;
 
         &:active {
-            transform: scale(1.2);
+            transform: scale(0.8);
         }
 
         &-border {
             color: $danger;
             border: 2px solid $danger;
+
+            &:hover{
+                background: $danger;
+                color: $light;
+            }
         }
     }
 }

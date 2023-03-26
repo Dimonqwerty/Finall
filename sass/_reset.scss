@@ -12,11 +12,11 @@ $color: #000;
 *,
 *:before,
 *:after {
-    @include standart
+    @include standart();
+    scroll-behavior: smooth;
 }
 
 body {
-    scroll-behavior: smooth;
     font-size: $font-size;
     font-weight: $font-weight;
     height: auto;
@@ -32,6 +32,8 @@ body {
 
     button {
         outline: none !important;
+        border: none;
+        cursor: pointer;
     }
 
     a {

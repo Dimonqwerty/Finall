@@ -4,10 +4,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-  scroll-behavior: smooth;
   font-size: 18px;
   font-weight: 400;
   height: auto;
@@ -21,6 +21,8 @@ body img {
 }
 body button {
   outline: none !important;
+  border: none;
+  cursor: pointer;
 }
 body a {
   text-decoration: none;
@@ -40,7 +42,7 @@ body::before {
   background-color: #fdfdfd;
   flex-direction: row;
   position: sticky;
-  top: 10px;
+  top: 0;
   width: 100%;
   margin-top: 2%;
   padding: 1% 5%;
@@ -86,14 +88,18 @@ body::before {
   border-radius: 30px;
   color: #0B132A;
   border: 0;
-  cursor: pointer;
+  transition: transform 0.25s;
 }
 .sing .btn:active {
-  transform: scale(1.2);
+  transform: scale(0.8);
 }
 .sing .btn-border {
-  color: #F53855;
-  border: 2px solid #F53855;
+  color: #F53838;
+  border: 2px solid #F53838;
+}
+.sing .btn-border:hover {
+  background: #F53838;
+  color: #fdfdfd;
 }
 
 .list-item {
@@ -148,11 +154,61 @@ body::before {
 .container .element h1 {
   font-size: 45px;
   font-weight: 700;
+  color: #0B132A;
+  margin-bottom: 3%;
+}
+.container .element p {
+  color: #4F5665;
 }
 .container .element-row {
+  border-radius: 10px;
   flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 8% 0;
+  padding: 2% 0;
+  text-align: center;
+  box-shadow: 0 25px 20px rgba(216, 216, 216, 0.5803921569);
+}
+.container .element-row .col {
+  width: 33%;
+  padding: 0 5%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  flex-wrap: nowrap;
+}
+.container .element-row .col span {
+  text-align: left;
+}
+.container .element-row .col span h3 {
+  color: #0B132A;
+}
+.container .element-row .col span p {
+  color: #4F5665;
+}
+.container .element-row .col img {
+  width: 20%;
+  margin-right: 10%;
+}
+.container .element-row .col-center {
+  border-left: 2px solid #EEEFF2;
+  border-right: 2px solid #EEEFF2;
+}
+.container .element button {
+  background: #F53838;
+  padding: 2% 5%;
+  margin: 4% 0;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 25px;
+  border-radius: 10px;
+  transition: transform 0.25s;
+  box-shadow: 0 10px 18px rgba(245, 56, 56, 0.3490196078);
+}
+.container .element button:active {
+  transform: scale(0.8);
 }/*# sourceMappingURL=style.css.map */
