@@ -33,6 +33,7 @@ body a:active, body a:hover, body avisited {
 .navbar {
   flex-direction: row;
   position: sticky;
+  top: 10px;
   width: 100%;
   margin-top: 2%;
   padding: 1% 5%;
@@ -124,4 +125,9 @@ body a:active, body a:hover, body avisited {
     display: block;
     width: 15%;
   }
+}
+body::before {
+  display: block;
+  content: "";
+  height: 0;
 }/*# sourceMappingURL=style.css.map */
