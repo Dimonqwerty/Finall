@@ -1,0 +1,47 @@
+$font-size: 18px;
+$font-stack: Arial, Helvetica, sans-serif;
+$font-weight: 400;
+$color: #000;
+
+@mixin standart {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    @include standart
+}
+
+body {
+    scroll-behavior: smooth;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    height: auto;
+    overflow-x: hidden;
+
+    ul {
+        list-style-type: none;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    button {
+        outline: none !important;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color;
+
+        &:active,
+        &:hover,
+        &visited {
+            color: $color
+        }
+    }
+}

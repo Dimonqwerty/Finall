@@ -1,0 +1,127 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-size: 18px;
+  font-weight: 400;
+  height: auto;
+  overflow-x: hidden;
+}
+body ul {
+  list-style-type: none;
+}
+body img {
+  width: 100%;
+}
+body button {
+  outline: none !important;
+}
+body a {
+  text-decoration: none;
+  color: #000;
+}
+body a:active, body a:hover, body avisited {
+  color: #000;
+}
+
+.navbar {
+  flex-direction: row;
+  position: sticky;
+  width: 100%;
+  margin-top: 2%;
+  padding: 1% 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .navbar-brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .navbar-brand .brand-title {
+  font-size: 25px;
+  font-weight: 700px;
+  margin: 8%;
+  color: #0B132A;
+}
+.navbar .list-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .list-group .list-item {
+  margin: 0 5%;
+}
+.navbar .list-group .list-item a {
+  color: #4F5665;
+}
+.navbar .menu-toggle {
+  display: none;
+}
+
+.sing {
+  flex-basis: 30%;
+}
+.sing .btn {
+  background-color: transparent;
+  height: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 3% 13%;
+  border-radius: 30px;
+  color: #0B132A;
+  border: 0;
+  cursor: pointer;
+}
+.sing .btn:active {
+  transform: scale(1.2);
+}
+.sing .btn-border {
+  color: #F53855;
+  border: 2px solid #F53855;
+}
+
+.list-item {
+  margin: 0 5%;
+}
+.list-item a {
+  color: #4F5665;
+}
+
+.sidebar {
+  text-align: center;
+  display: none;
+  width: 90%;
+  padding: 1% 5%;
+  background-color: #d8d8d8;
+  margin: 0 5%;
+  border-radius: 20px;
+}
+.sidebar .list-item {
+  margin: 2% 0;
+}
+.sidebar .sing {
+  margin: 5% 0;
+}
+
+@media (max-width: 450px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .navbar .sing,
+  .navbar .list-group {
+    display: none;
+  }
+  .navbar .menu-toggle {
+    display: block;
+    width: 15%;
+  }
+}/*# sourceMappingURL=style.css.map */
