@@ -1,5 +1,6 @@
 $dark: #0B132A;
 $grey: #4F5665;
+$shadow-grey: #d8d8d894;
 
 .features {
     width: 100%;
@@ -7,6 +8,7 @@ $grey: #4F5665;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 12px 18px $shadow-grey;
 
     &-img {
         flex-basis: 50%;
@@ -50,6 +52,7 @@ $grey: #4F5665;
 @media(max-width: 500px) {
     .features {
         flex-direction: column;
+
         &-img {
             width: 80%;
         }
