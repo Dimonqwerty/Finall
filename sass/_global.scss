@@ -1,0 +1,51 @@
+$dark: #0B132A;
+$grey: #4F5665;
+
+.global {
+    width: 100%;
+    padding: 3% 8%;
+    text-align: center;
+
+    h2 {
+        color: #0B132A;
+        font-size: 35px;
+        font-weight: 500;
+        line-height: 50px;
+    }
+
+    p {
+        color: $grey;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        margin: 2% 0;
+
+        strong {
+            font-weight: 800;
+        }
+    }
+
+    img.world {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .global {
+        .row {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            img {
+                width: 45%;
+            }
+        }
+    }
+}

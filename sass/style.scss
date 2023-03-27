@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 @import 'reset';
+
 body::before {
     display: block;
     content: '';
     height: 0;
 }
+
 @import 'header';
 @import 'about';
 @import 'features';
 @import 'price';
+@import 'global';
