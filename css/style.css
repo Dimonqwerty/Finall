@@ -430,4 +430,77 @@ body::before {
   .global .row img {
     width: 45%;
   }
+}
+.slider {
+  width: 100%;
+  padding: 3% 8%;
+  text-align: center;
+}
+.slider h2 {
+  color: #0B132A;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.slider p {
+  color: #4F5665;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.slider .card {
+  width: 40%;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: none;
+  padding: 3%;
+  align-items: center;
+}
+.slider .card h2 {
+  font-family: Rubik;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.slider .card h4 {
+  font-family: Rubik;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.slider .active {
+  display: flex;
+  border: 2px solid #F53838;
+}
+.slider #left {
+  margin-bottom: 4.5%;
+  margin-left: 5%;
+  margin-right: -2%;
+}
+.slider img {
+  cursor: pointer;
+}
+.slider .point {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #4F5665;
+  border-radius: 50px;
+  margin-bottom: 6%;
+  cursor: pointer;
+}
+.slider .point-active {
+  width: 30px;
+  background: #F53838;
 }/*# sourceMappingURL=style.css.map */

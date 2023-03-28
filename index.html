@@ -8,7 +8,6 @@
     <title>Project</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/Logo.svg">
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 </head>
 
 <body>
@@ -23,7 +22,7 @@
             <li class="list-item"><a href="#features">Features</a></li>
             <li class="list-item"><a href="#price">Pricing</a></li>
             <li class="list-item"><a href="#global">Testimonials</a></li>
-            <li class="list-item"><a href="#">Help</a></li>
+            <li class="list-item"><a href="#slider">Help</a></li>
         </ul>
 
         <div class="sing sing-main">
@@ -38,7 +37,7 @@
                 <li class="list-item"><a href="#features">Features</a></li>
                 <li class="list-item"><a href="#price">Pricing</a></li>
                 <li class="list-item"><a href="#global">Testimonials</a></li>
-                <li class="list-item"><a href="#">Help</a></li>
+                <li class="list-item"><a href="#slider">Help</a></li>
             </ul>
             <div class="sing">
                 <button class="btn">Sign In</button>
@@ -166,8 +165,71 @@
         </div>
     </section>
 
+    <section class="slider" id="slider">
+        <h2>Trusted by Thousands of <br> Happy Customer</h2>
+        <p>These are the stories of our customers who have joined us with great <br> pleasure when using this crazy
+            feature
+        </p>
+        <div class="container-slider">
+            <div class="inner">
+                <div class="card active" id="1">
+                    <img src="img/customer1.svg" alt="Slide 1">
+                    <div class="label">
+                        <h2>Viezh Robert</h2>
+                        <h4>Warsaw, Poland</h4>
+                    </div>
+                    <h3>4.5<img src="img/star.svg" alt="star"></h3>
+                    <p>“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far
+                        there have been no problems. LaslesVPN always the best”</p>
+                </div>
+                <div class="card" id="2">
+                    <img src="img/customer2.svg" alt="Slide 1">
+                    <div class="label">
+                        <h2>Yessica Christy</h2>
+                        <h4>Shanxi, China</h4>
+                    </div>
+                    <h3>4.5<img src="img/star.svg" alt="star"></h3>
+                    <p>“I like it because I like to travel far and still can connect with high speed”</p>
+                </div>
+                <div class="card" id="3">
+                    <img src="img/customer3.svg" alt="Slide 1">
+                    <div class="lable">
+                        <h2>Kim Young Jou</h2>
+                        <h4>Seoul, South Korea</h4>
+                    </div>
+                    <h3>4.5<img src="img/star.svg" alt="star"></h3>
+                    <p>“This is very unusual for my business that currently requires a virtual private network that has
+                        high
+                        security”</p>
+                </div>
+                <div class="card" id="4">
+                    <img src="img/customer4.svg" alt="Slide 1">
+                    <div class="label">
+                        <h2>Viezh Robert</h2>
+                        <h4>Seoul, South Korea</h4>
+                    </div>
+                    <h3>4.5<img src="img/star.svg" alt="star"></h3>
+                    <p>“This is very unusual for my business that currently requires a virtual private network that has
+                        high
+                        security</p>
+                </div>
+            </div>
+            <div class="controls">
+                <div class="point point-active"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+                <img src="img/left.svg" alt="left" id="left">
+                <img src="img/right.svg" alt="left" id="right">
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="js/header.js"></script>
     <script src="js/price.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 
 </html>

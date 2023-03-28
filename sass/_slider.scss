@@ -1,0 +1,87 @@
+$dark: #0B132A;
+$grey: #4F5665;
+$danger: #F53838;
+
+.slider {
+    width: 100%;
+    padding: 3% 8%;
+    text-align: center;
+
+    h2 {
+        color: $dark;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    p {
+        color: $grey;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .card {
+        width: 40%;
+        border-radius: 10px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        display: none;
+        padding: 3%;
+        align-items: center;
+
+        h2 {
+            font-family: Rubik;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 30px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        h4 {
+            font-family: Rubik;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 0em;
+            text-align: center;
+        }
+    }
+
+    .active {
+        display: flex;
+        border: 2px solid $danger;
+    }
+
+    #left {
+        margin-bottom: 4.5%;
+        margin-left: 5%;
+        margin-right: -2%;
+    }
+
+    img {
+        cursor: pointer;
+    }
+
+    .point {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-color: $grey;
+        border-radius: 50px;
+        margin-bottom: 6%;
+        cursor: pointer;
+
+        &-active {
+            width: 30px;
+            background: $danger;
+        }
+    }
+}
