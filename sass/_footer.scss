@@ -6,6 +6,8 @@ $grey: #4F5665;
     width: 100%;
     padding: 8% 9%;
     padding-top: 11%;
+    display: flex;
+    justify-content: space-between;
 
     .footer-head {
         h2 {
@@ -29,7 +31,7 @@ $grey: #4F5665;
         }
 
         .icon-row {
-            margin-top: 3%;
+            margin-top: 9%;
             margin-left: -1.2%;
         }
 
@@ -44,6 +46,40 @@ $grey: #4F5665;
                 font-weight: 600;
                 line-height: 30px;
             }
+        }
+    }
+
+    .footer-aside {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            color: $grey;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 30px;
+            margin: 3% 0;
+
+            &.head-li {
+                color: $dark;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .footer {
+        padding-top: 16%;
+        flex-direction: column;
+
+        .footer-aside {
+            margin-top: 15%;
+            width: 100%;
+            flex-direction: column;
         }
     }
 }

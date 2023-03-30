@@ -439,8 +439,8 @@ body::before {
 }
 .slider h2 {
   color: #0B132A;
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 35px;
+  font-weight: 500;
   line-height: 30px;
   letter-spacing: 0em;
   text-align: center;
@@ -577,6 +577,8 @@ body::before {
   width: 100%;
   padding: 8% 9%;
   padding-top: 11%;
+  display: flex;
+  justify-content: space-between;
 }
 .footer .footer-head h2 {
   color: #0B132A;
@@ -596,7 +598,7 @@ body::before {
   line-height: 24px;
 }
 .footer .footer-head .icon-row {
-  margin-top: 3%;
+  margin-top: 9%;
   margin-left: -1.2%;
 }
 .footer .footer-head p {
@@ -609,4 +611,34 @@ body::before {
   font-size: 16px;
   font-weight: 600;
   line-height: 30px;
+}
+.footer .footer-aside {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer-aside li {
+  color: #4F5665;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  margin: 3% 0;
+}
+.footer .footer-aside li.head-li {
+  color: #0B132A;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+@media (max-width: 500px) {
+  .footer {
+    padding-top: 16%;
+    flex-direction: column;
+  }
+  .footer .footer-aside {
+    margin-top: 15%;
+    width: 100%;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */
