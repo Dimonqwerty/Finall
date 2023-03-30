@@ -1,35 +1,47 @@
-$(document).ready(function () {
+let sliderImg = document.querySelectorAll('.card2');
+let arrowLeft = document.querySelector('#left');
+let arrowRight = document.querySelector('#right');
+let current = 0;
+console.log(sliderImg);
 
-    let cards = $('.card');
+function startSlide() {
+    sliderImg[0].classList.add('active');
+}
 
-    let activeCard = $('.card.active');
-
-    $('#right').on('click', function () {
-
-        activeCard.removeClass('active');
-
-        if (activeCard == (cards.last())) {
-            cards.first().addClass('active');
-            activeCard = $('.card.active');
-        }
-        else {
-            activeCard.next().addClass('active');
-            activeCard = $('.card.active');
-        }
-    })
-
-    $('#left').on('click', function () {
-
-        activeCard.removeClass('active');
-
-        if (activeCard == (cards.first())) {
-            cards.last().addClass('active');
-            activeCard = $('.card.active');
-        }
-
-        else {
-            activeCard.prev().addClass('active');
-            activeCard = $('.card.active');
-        }
-    })
+function sliderLEft() {
+    sliderImg[current - 1].classList.add('active');
+    current--;
+}
+arrowLeft.addEventListener('click', function () {
+    sliderImg[current].classList.remove('active');
+    if (current === 0) {
+        current = sliderImg.length;
+    }
+    sliderLEft()
 })
+
+function sliderRIght() {
+    sliderImg[current + 1].classList.add('active');
+    current++;
+}
+arrowRight.addEventListener('click', function () {
+    sliderImg[current].classList.remove('active');
+    if (current === sliderImg.length - 1) {
+        current = -1;
+    }
+    sliderRIght();
+})
+startSlide()
+
+// отримуємо всі блоки та кнопки
+const blocks = document.querySelectorAll('.block');
+const buttons = document.querySelectorAll('.button');
+
+// проходимось по кожному блоку
+blocks.forEach((block, index) => {
+    // перевіряємо чи є у блоку class="active"
+    if (block.classList.contains('active')) {
+        // якщо так, то додаємо class="btn-active" до відповідної кнопки
+        buttons[index].classList.add('btn-active');
+    }
+});

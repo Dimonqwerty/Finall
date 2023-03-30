@@ -1,0 +1,49 @@
+$dark: #0B132A;
+$grey: #4F5665;
+
+
+.footer {
+    width: 100%;
+    padding: 8% 9%;
+    padding-top: 11%;
+
+    .footer-head {
+        h2 {
+            color: $dark;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            img {
+                margin-right: 1%;
+            }
+
+            strong {
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 24px;
+            }
+        }
+
+        .icon-row {
+            margin-top: 3%;
+            margin-left: -1.2%;
+        }
+
+        p {
+            color: $grey;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 30px;
+
+            strong {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 30px;
+            }
+        }
+    }
+}
