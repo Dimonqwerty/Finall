@@ -2,10 +2,26 @@ let sliderImg = document.querySelectorAll('.card2');
 let arrowLeft = document.querySelector('#left');
 let arrowRight = document.querySelector('#right');
 let current = 0;
-console.log(sliderImg);
 
 function startSlide() {
     sliderImg[0].classList.add('active');
+}
+
+function point() {
+    const activeCardIds = ['1card', '2card', '3card', '4card'];
+    const activePointIds = ['1', '2', '3', '4'];
+
+    for (let i = 0; i < activeCardIds.length; i++) {
+        const activeCardId = activeCardIds[i];
+        const activePointId = activePointIds[i];
+
+        if (document.getElementById(activeCardId).classList.contains('active')) {
+            const points = document.querySelectorAll('.point');
+            points.forEach(point => point.classList.remove('point-active'));
+            document.getElementById(activePointId).classList.add('point-active');
+            break;
+        }
+    }
 }
 
 function sliderLEft() {
@@ -18,6 +34,7 @@ arrowLeft.addEventListener('click', function () {
         current = sliderImg.length;
     }
     sliderLEft()
+    point()
 })
 
 function sliderRIght() {
@@ -30,18 +47,6 @@ arrowRight.addEventListener('click', function () {
         current = -1;
     }
     sliderRIght();
+    point()
 })
 startSlide()
-
-// отримуємо всі блоки та кнопки
-const blocks = document.querySelectorAll('.block');
-const buttons = document.querySelectorAll('.button');
-
-// проходимось по кожному блоку
-blocks.forEach((block, index) => {
-    // перевіряємо чи є у блоку class="active"
-    if (block.classList.contains('active')) {
-        // якщо так, то додаємо class="btn-active" до відповідної кнопки
-        buttons[index].classList.add('btn-active');
-    }
-});
