@@ -7,7 +7,7 @@ function startSlide() {
     sliderImg[0].classList.add('active');
 }
 
-function point() {
+function pointSwap() {
     const activeCardIds = ['1card', '2card', '3card', '4card'];
     const activePointIds = ['1', '2', '3', '4'];
 
@@ -24,29 +24,40 @@ function point() {
     }
 }
 
-function sliderLEft() {
-    sliderImg[current - 1].classList.add('active');
+function slideLeft() {
+    sliderImg[current].classList.remove('active');
     current--;
-}
-arrowLeft.addEventListener('click', function () {
-    sliderImg[current].classList.remove('active');
-    if (current === 0) {
-        current = sliderImg.length;
+    if (current < 0) {
+        current = sliderImg.length - 1;
     }
-    sliderLEft()
-    point()
-})
+    sliderImg[current].classList.add('active');
+    pointSwap();
+}
 
-function sliderRIght() {
-    sliderImg[current + 1].classList.add('active');
-    current++;
-}
-arrowRight.addEventListener('click', function () {
+arrowLeft.addEventListener('click', slideLeft);
+
+function slideRight() {
     sliderImg[current].classList.remove('active');
-    if (current === sliderImg.length - 1) {
-        current = -1;
+    current++;
+    if (current === sliderImg.length) {
+        current = 0;
     }
-    sliderRIght();
-    point()
-})
-startSlide()
+    sliderImg[current].classList.add('active');
+    pointSwap();
+}
+
+arrowRight.addEventListener('click', slideRight);
+
+startSlide();
+
+const points = document.querySelectorAll('.point');
+
+points.forEach(point => {
+    point.addEventListener('click', () => {
+        sliderImg.forEach(slide => slide.classList.remove('active'));
+        const cardId = point.id.replace('point', '') + 'card';
+        document.getElementById(cardId).classList.add('active');
+        current = parseInt(point.id) - 1;
+        pointSwap();
+    });
+});
