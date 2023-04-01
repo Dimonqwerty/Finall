@@ -52,6 +52,13 @@ $light: #fdfdfd;
         display: none;
     }
 
+    .list-group_hidden {
+        @include flex();
+        display: none;
+        width: 90%;
+        margin: 1% auto;
+    }
+
     .sidebar {
         text-align: center;
         display: none;
@@ -105,10 +112,41 @@ $light: #fdfdfd;
     @include list-item();
 }
 
+@media (max-width:1200px) {
+    .navbar {
+        padding: 1% 5%;
+
+        .list-group {
+            margin-left: -10%;
+        }
+    }
+}
+
+@media (max-width:800px) {
+    .navbar {
+        flex-wrap: wrap;
+
+        .list-group {
+            display: none;
+        }
+
+        .sing-main {
+            flex-basis: 40%;
+        }
+
+        .list-group_hidden {
+            display: flex;
+        }
+    }
+}
+
 @media (max-width:500px) {
     .navbar {
-        flex-direction: row;
         justify-content: space-around;
+
+        .list-group_hidden {
+            display: none;
+        }
 
         .sing-main,
         .list-group {

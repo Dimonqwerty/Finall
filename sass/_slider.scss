@@ -31,7 +31,7 @@ $shadow-danger: #f53838a5;
     .card {
         width: 40%;
         border-radius: 10px;
-        margin: 0 auto;
+        margin: 3% auto;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -64,14 +64,13 @@ $shadow-danger: #f53838a5;
     }
 
     .controls {
-        #left {
-            margin-bottom: 4.5%;
-            margin-left: 5%;
-            margin-right: -2%;
-        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        #left:active,
-        #right:active {
+        #left,
+        #right {
+            margin-right: 2%;
             transition: transform 0.25s;
 
             &:active {
@@ -80,23 +79,27 @@ $shadow-danger: #f53838a5;
         }
     }
 
-    img {
-        cursor: pointer;
+    .controls-point-container {
+        margin-right: 8%;
+
+        .point {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-color: $grey;
+            border-radius: 50px;
+            margin-top: 6%;
+            cursor: pointer;
+
+            &-active {
+                width: 30px;
+                background: $danger;
+            }
+        }
     }
 
-    .point {
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        background-color: $grey;
-        border-radius: 50px;
-        margin-bottom: 6%;
+    img {
         cursor: pointer;
-
-        &-active {
-            width: 30px;
-            background: $danger;
-        }
     }
 
     .subscrive {
@@ -153,15 +156,13 @@ $shadow-danger: #f53838a5;
             width: 100%;
         }
 
-        .point {
-            display: none;
-        }
-
         .controls {
-            #left {
-                margin-bottom: 19.5%;
+            .point {
+                display: none;
             }
         }
+
+
 
         .subscrive {
             flex-direction: column;

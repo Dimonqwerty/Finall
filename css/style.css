@@ -75,6 +75,14 @@ body::before {
 .navbar .menu-toggle {
   display: none;
 }
+.navbar .list-group_hidden {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+  width: 90%;
+  margin: 1% auto;
+}
 .navbar .sidebar {
   text-align: center;
   display: none;
@@ -124,10 +132,34 @@ body::before {
   color: #4F5665;
 }
 
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 1% 5%;
+  }
+  .navbar .list-group {
+    margin-left: -10%;
+  }
+}
+@media (max-width: 800px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .navbar .list-group {
+    display: none;
+  }
+  .navbar .sing-main {
+    flex-basis: 40%;
+  }
+  .navbar .list-group_hidden {
+    display: flex;
+  }
+}
 @media (max-width: 500px) {
   .navbar {
-    flex-direction: row;
     justify-content: space-around;
+  }
+  .navbar .list-group_hidden {
+    display: none;
   }
   .navbar .sing-main,
   .navbar .list-group {
@@ -456,7 +488,7 @@ body::before {
 .slider .card {
   width: 40%;
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 3% auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -484,34 +516,38 @@ body::before {
   display: flex;
   border: 2px solid #F53838;
 }
-.slider .controls #left {
-  margin-bottom: 4.5%;
-  margin-left: 5%;
-  margin-right: -2%;
+.slider .controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider .controls #left,
+.slider .controls #right {
+  margin-right: 2%;
+  transition: transform 0.25s;
 }
 .slider .controls #left:active,
 .slider .controls #right:active {
-  transition: transform 0.25s;
-}
-.slider .controls #left:active:active,
-.slider .controls #right:active:active {
   transform: scale(0.8);
 }
-.slider img {
-  cursor: pointer;
+.slider .controls-point-container {
+  margin-right: 8%;
 }
-.slider .point {
+.slider .controls-point-container .point {
   display: inline-block;
   width: 15px;
   height: 15px;
   background-color: #4F5665;
   border-radius: 50px;
-  margin-bottom: 6%;
+  margin-top: 6%;
   cursor: pointer;
 }
-.slider .point-active {
+.slider .controls-point-container .point-active {
   width: 30px;
   background: #F53838;
+}
+.slider img {
+  cursor: pointer;
 }
 .slider .subscrive {
   width: 100%;
@@ -558,11 +594,8 @@ body::before {
   .slider .card {
     width: 100%;
   }
-  .slider .point {
+  .slider .controls .point {
     display: none;
-  }
-  .slider .controls #left {
-    margin-bottom: 19.5%;
   }
   .slider .subscrive {
     flex-direction: column;
