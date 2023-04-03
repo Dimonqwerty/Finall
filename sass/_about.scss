@@ -19,7 +19,7 @@ $shadow-grey: #d8d8d894;
 
         .btn {
             background: $danger;
-            padding: 2% 5%;
+            padding: 3% 8%;
             margin: 4% 0;
             color: $light;
             font-size: 16px;
@@ -84,10 +84,31 @@ $shadow-grey: #d8d8d894;
                     border-left: 2px solid $light-gray;
                     border-right: 2px solid $light-gray;
                 }
+
+                img {
+                    transition: transform 0.25s;
+
+                    &:hover {
+                        transform: scale(1.4);
+                    }
+                }
             }
         }
     }
 }
+
+@media (max-width: 1200px) {
+    .container {
+        .element {
+            flex-basis: 100%;
+
+            .btn {
+                padding: 2% 5%;
+            }
+        }
+    }
+}
+
 
 @media (max-width: 500px) {
     .container {

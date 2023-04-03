@@ -148,7 +148,7 @@ body::before {
     display: none;
   }
   .navbar .sing-main {
-    flex-basis: 40%;
+    flex-basis: 60%;
   }
   .navbar .list-group_hidden {
     display: flex;
@@ -183,7 +183,7 @@ body::before {
 }
 .container .element .btn {
   background: #F53838;
-  padding: 2% 5%;
+  padding: 3% 8%;
   margin: 4% 0;
   color: #FFFFFF;
   font-size: 16px;
@@ -239,7 +239,21 @@ body::before {
   border-left: 2px solid #EEEFF2;
   border-right: 2px solid #EEEFF2;
 }
+.container .element-row .col img {
+  transition: transform 0.25s;
+}
+.container .element-row .col img:hover {
+  transform: scale(1.4);
+}
 
+@media (max-width: 1200px) {
+  .container .element {
+    flex-basis: 100%;
+  }
+  .container .element .btn {
+    padding: 2% 5%;
+  }
+}
 @media (max-width: 500px) {
   .container .element {
     flex-basis: 100%;
@@ -315,7 +329,7 @@ body::before {
   padding-bottom: 4%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .features {
     flex-direction: column;
   }
