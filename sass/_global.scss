@@ -37,12 +37,22 @@ $grey: #4F5665;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
     .global {
         .row {
             flex-wrap: wrap;
             justify-content: center;
 
+            img {
+                width: 25%;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .global {
+        .row {
             img {
                 width: 45%;
             }

@@ -428,6 +428,11 @@ body::before {
   border: 2px solid #F53838;
 }
 
+@media (max-width: 800px) {
+  .card {
+    margin: 4% 0;
+  }
+}
 @media (max-width: 500px) {
   .card {
     width: 100%;
@@ -468,11 +473,16 @@ body::before {
   align-items: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .global .row {
     flex-wrap: wrap;
     justify-content: center;
   }
+  .global .row img {
+    width: 25%;
+  }
+}
+@media (max-width: 500px) {
   .global .row img {
     width: 45%;
   }
@@ -604,6 +614,11 @@ body::before {
   transform: scale(0.8);
 }
 
+@media (max-width: 800px) {
+  .slider .card {
+    width: 60%;
+  }
+}
 @media (max-width: 500px) {
   .slider .card {
     width: 100%;

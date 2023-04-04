@@ -109,6 +109,12 @@ $light: #fff;
     }
 }
 
+@media (max-width:800px) {
+    .card {
+        margin: 4% 0;
+    }
+}
+
 @media (max-width:500px) {
     .card {
         width: 100%;

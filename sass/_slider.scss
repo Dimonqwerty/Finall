@@ -150,6 +150,14 @@ $shadow-danger: #f53838a5;
     }
 }
 
+@media (max-width:800px){
+    .slider{
+        .card{
+            width: 60%;
+        }
+    }
+}
+
 @media (max-width:500px) {
     .slider {
         .card {
